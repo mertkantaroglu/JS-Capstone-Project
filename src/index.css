@@ -53,21 +53,21 @@ ul {
   height: auto;
 }
 
-.movies li h3 {
+.show li h3 {
   text-align: center;
 }
 
-.movie-features .flex {
+.show-features .flex {
   flex-direction: column;
   justify-content: start;
   align-items: center;
 }
 
-.movies li .flex {
+.show li .flex {
   margin: 15px;
 }
 
-.movies li .flex span:last-child {
+.show li .flex span:last-child {
   cursor: pointer;
 }
 
@@ -80,8 +80,8 @@ ul {
   height: auto;
 }
 
-.movie-features,
-.movie-popup-title {
+.show-features,
+.show-popup-title {
   text-align: center;
 }
 

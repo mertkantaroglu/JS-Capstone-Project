@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,700&display=swap');
+
+* {
+  font-family: 'Roboto Condensed', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav,
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 2rem;
+  background-color: #000;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+footer {
+  font-style: italic;
+  margin-bottom: 0;
+  margin-top: 20px;
+}
+
+li > a {
+  text-decoration: none;
+  color: #fff;
+  list-style: none;
+}
+
+li > a:hover {
+  font-size: large;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+#logo {
+  width: 50px;
+  height: auto;
+}
+
+.movies li h3 {
+  text-align: center;
+}
+
+.movie-features .flex {
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.movies li .flex {
+  margin: 15px;
+}
+
+.movies li .flex span:last-child {
+  cursor: pointer;
+}
+
+.show-image-container {
+  text-align: center;
+}
+
+.show-image-container img {
+  width: 400px;
+  height: auto;
+}
+
+.movie-features,
+.movie-popup-title {
+  text-align: center;
+}
+
+.close-icon {
+  display: block;
+  position: absolute;
+  right: 117px;
+  top: 58px;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+  border-radius: 50%;
+
+  /* padding: 3px; */
+  width: 20px;
+  height: auto;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.popup-display {
+  justify-content: space-around;
+  align-items: start;
+  margin: 20px auto;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  width: 80%;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-content input,
+.form-content textarea {
+  padding: 5px;
+  border-radius: 8px;
+  border: 0.3px solid #000;
+}
+
+.form-content input:hover,
+.form-content textarea:hover {
+  border: 0.5px solid #00968859;
+}
+
+.padd {
+  padding: 10px;
+}
+
+.comment-items p {
+  padding: 5px;
+}
+
+button {
+  width: 80px;
+  border: none;
+  background: none;
+  background-color: #000;
+  padding: 5px;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.btncomment {
+  color: #000;
+  background-color: #fff;
+  margin: 10px;
+}
+
+.description,
+.likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

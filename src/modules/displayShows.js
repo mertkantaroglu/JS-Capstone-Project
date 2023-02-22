@@ -1,6 +1,6 @@
 const showContainer = document.querySelector('.movie-section');
 
-const homePage = async (shows) => {
+const displayShows = async (shows) => {
   showContainer.innerHTML = '';
   shows.forEach((item) => {
     showContainer.innerHTML += `
@@ -10,7 +10,7 @@ const homePage = async (shows) => {
         <div class="description">
           <div class="likes">
             <i class="fa-sharp fa-regular fa-heart" data-id=${item.id}></i>            
-            <p data-id = "${item.id}"> <span class="like-count"></span></p>
+            <p data-id = "${item.id}"> <span class="like-numbers"></span></p>
           </div>
           <button class="comments-btn" id=${item.id}>Comments</button>
           </div>
@@ -19,4 +19,4 @@ const homePage = async (shows) => {
   });
 };
 
-export default homePage;
+export default displayShows;

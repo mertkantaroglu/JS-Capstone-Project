@@ -1,7 +1,7 @@
 export const showComment = (data, node) => {
   node.innerHTML = '';
   const commentTitle = document.createElement('h4');
-  commentTitle.innerHTML = `Comments (${counter(data)})`;
+  // commentTitle.innerHTML = `Comments (${counter(data)})`;
   node.appendChild(commentTitle);
   const commentItem = document.createElement('div');
   commentItem.classList.add('comment-items');
@@ -15,7 +15,7 @@ export const showComment = (data, node) => {
   node.appendChild(commentItem);
 };
 
-const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rdCMW54T0sQtFphOfxh4/comments?item_id=';
+const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rdCMW54T0sQtFphOfxh4/comments?item_id=${}';
 
 export const getComments = async (id) => {
   const request = new Request(url + id);

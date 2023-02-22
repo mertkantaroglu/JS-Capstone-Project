@@ -1,4 +1,4 @@
-import { showComment, getComments } from './comments.js';
+import { showComment, getComments, commentFormInput } from './comments.js';
 
 const popupContainer = document.querySelector('.popup-display');
 
@@ -26,6 +26,7 @@ const commentPopup = async (
   const comments = await getComments(id);
 
   showComment(comments, commentsContainer);
+  commentFormInput(id, commentsContainer)
 };
 
 export default commentPopup;

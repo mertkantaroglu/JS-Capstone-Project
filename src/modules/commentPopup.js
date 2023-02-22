@@ -26,7 +26,7 @@ const commentPopup = async (
   const comments = await getComments(id);
 
   showComment(comments, commentsContainer);
-  commentFormInput(id, commentsContainer)
+  commentFormInput(id, commentsContainer);
 };
 
 export default commentPopup;

@@ -2,8 +2,8 @@ import './index.css';
 import displayShows from './modules/displayShows.js';
 import getShows from './modules/getShows.js';
 import commentPopup from './modules/commentPopup.js';
-import { getLikes } from './modules/displayLikes.js';
-import addLike from './modules/addLikes.js'
+import getLikes from './modules/getLike.js';
+import addLike from './modules/addLikes.js';
 
 const showContainer = document.querySelector('.movie-section');
 const popupContainer = document.querySelector('.popup-display');
@@ -42,6 +42,8 @@ window.addEventListener('load', async () => {
     if (closeButton) {
       popupContainer.style.display = 'none';
       showContainer.style.display = 'flex';
+      addEvents();
+      getLikes();
     }
   });
 });

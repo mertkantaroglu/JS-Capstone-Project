@@ -36,7 +36,7 @@
 
 - **made with use of github workflow**
 - **made with use of linter checkers**
-- **made with use of jets for testing**
+- **made with use of Jest for testing**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -51,7 +51,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-Coming soon!
+[Live Demo](https://mertkantaroglu.github.io/JS-Capstone-Project/dist/index.html)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -119,6 +119,6 @@ We would like to thank for Microverse to provide me learning materials, my peers
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/mertkantaroglu/JS-Capstone-Project/blob/dev/LICENSE) licensed.
+This project is [MIT](LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

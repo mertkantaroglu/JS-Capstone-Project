@@ -2,17 +2,17 @@ import './index.css';
 import displayShows from './modules/displayShows.js';
 import getShows from './modules/getShows.js';
 import commentPopup from './modules/commentPopup.js';
-import getLikes from './modules/getLike.js';
-import addLike from './modules/addLikes.js';
+import { getLikes } from './modules/displayLikes';
+import addLikes from './modules/addLikes.js';
 
 const showContainer = document.querySelector('.movie-section');
 const popupContainer = document.querySelector('.popup-display');
 
 const addEvents = () => {
-  const likeIcon = document.querySelectorAll('.fa-heart');
-  likeIcon.forEach((item) => {
-    item.addEventListener('click', () => {
-      addLike(item.dataset.id);
+  const likeIcons = document.querySelectorAll('.fa-heart');
+  likeIcons.forEach((likeIcon) => {
+    likeIcon.addEventListener('click', () => {
+      addLikes(likeIcon.dataset.id);
     });
   });
 };
@@ -28,20 +28,20 @@ window.addEventListener('load', async () => {
     const closeButton = e.target.closest('.close-icon');
 
     if (commentButton) {
-      const selectedShow = shows.filter(
-        (it) => it.id.toString() === commentButton.id.toString(),
-      )[0];
+      const selectedShow = shows.find((show) => show.id === parseInt(commentButton.id));
       const {
         id, image, name, language, genres, rating, schedule,
       } = selectedShow;
-      showContainer.style.display = 'none';
-      popupContainer.style.display = 'flex';
+      showContainer.classList.add('close');
+      popupContainer.classList.add('flex');
       commentPopup(id, image, name, language, genres, rating, schedule);
-    }
+    }    
 
     if (closeButton) {
-      popupContainer.style.display = 'none';
-      showContainer.style.display = 'flex';
+      popupContainer.classList.add('close');
+      popupContainer.classList.remove('flex');
+      showContainer.classList.remove('close');
+      showContainer.classList.add('flex');
       addEvents();
       getLikes();
     }

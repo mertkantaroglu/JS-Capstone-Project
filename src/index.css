@@ -31,7 +31,7 @@ footer {
 }
 
 body {
-  background-color: #e5e5e5;;
+  background-color: #e5e5e5;
 }
 
 .single-movie {
@@ -179,8 +179,4 @@ button {
 
 .close {
   display: none;
-}
-
-.flex {
-  display: flex;
 }

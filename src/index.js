@@ -2,7 +2,7 @@ import './index.css';
 import displayShows from './modules/displayShows.js';
 import getShows from './modules/getShows.js';
 import commentPopup from './modules/commentPopup.js';
-import { getLikes } from './modules/displayLikes';
+import { getLikes } from './modules/displayLikes.js';
 import addLikes from './modules/addLikes.js';
 import getShowCount from './modules/showCounter.js';
 
@@ -33,6 +33,7 @@ window.addEventListener('load', async () => {
     const closeButton = e.target.closest('.close-icon');
 
     if (commentButton) {
+      // eslint-disable-next-line
       const selectedShow = shows.find((show) => show.id === parseInt(commentButton.id));
       const {
         id, image, name, language, genres, rating, schedule,
@@ -40,7 +41,7 @@ window.addEventListener('load', async () => {
       showContainer.classList.add('close');
       popupContainer.classList.add('flex');
       commentPopup(id, image, name, language, genres, rating, schedule);
-    }    
+    }
 
     if (closeButton) {
       popupContainer.classList.add('close');

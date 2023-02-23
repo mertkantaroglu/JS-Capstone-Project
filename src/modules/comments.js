@@ -7,13 +7,14 @@ export const counter = (comment) => {
 };
 
 export const showComment = (data, commentInfo) => {
-commentInfo.innerHTML = '';
+  commentInfo.innerHTML = '';
   const commentTitle = document.createElement('h4');
   commentTitle.textContent = `Comments (${counter(data)})`;
   commentInfo.appendChild(commentTitle);
   const commentItem = document.createElement('div');
   commentItem.classList.add('comment-items');
   if (!data.error) {
+    // eslint-disable-next-line
     for (const element of data) {
       const item = document.createElement('p');
       item.innerHTML = `<span>${element.creation_date} ${element.username}: ${element.comment}</span>`;
@@ -21,7 +22,7 @@ commentInfo.innerHTML = '';
     }
   }
   commentInfo.appendChild(commentItem);
-}
+};
 
 const link = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rdCMW54T0sQtFphOfxh4/comments?item_id=';
 

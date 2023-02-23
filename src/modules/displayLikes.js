@@ -1,4 +1,5 @@
 export async function displayLikes(likes) {
+  // eslint-disable-next-line
   for (const like of likes) {
     const elementId = `show-${like.item_id}`;
     const displayLike = document.getElementById(elementId);

@@ -4,8 +4,9 @@ import getShows from './modules/getShows.js';
 import commentPopup from './modules/commentPopup.js';
 import { getLikes } from './modules/displayLikes';
 import addLikes from './modules/addLikes.js';
+import getShowCount from './modules/showCounter.js';
 
-const showContainer = document.querySelector('.movie-section');
+const showContainer = document.querySelector('.show-section');
 const popupContainer = document.querySelector('.popup-display');
 
 const addEvents = () => {
@@ -22,6 +23,10 @@ window.addEventListener('load', async () => {
   displayShows(shows);
   addEvents();
   getLikes();
+
+  const showLink = document.querySelector('.show');
+  showLink.innerHTML = `Home (${getShowCount()})`;
+  getShowCount();
 
   document.addEventListener('click', async (e) => {
     const commentButton = e.target.closest('.comment-btn');

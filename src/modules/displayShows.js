@@ -1,4 +1,4 @@
-const showContainer = document.querySelector('.movie-section');
+const showContainer = document.querySelector('.show-section');
 
 const displayShows = async (shows) => {
   showContainer.innerHTML = '';

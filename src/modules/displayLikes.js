@@ -1,13 +1,12 @@
 export async function displayLikes(likes) {
-  // eslint-disable-next-line
-  for (const like of likes) {
+  likes.forEach((like) => {
     const elementId = `show-${like.item_id}`;
     const displayLike = document.getElementById(elementId);
     if (displayLike) {
       const likeNumbers = displayLike.querySelector('.like-numbers');
       likeNumbers.textContent = like.likes.toString();
     }
-  }
+  });
 }
 
 export const url = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/rdCMW54T0sQtFphOfxh4/likes/';

@@ -38,16 +38,14 @@ window.addEventListener('load', async () => {
       const {
         id, image, name, language, genres, rating, schedule,
       } = selectedShow;
-      showContainer.classList.add('close');
-      popupContainer.classList.add('flex');
+      showContainer.style.display = 'none';
+      popupContainer.style.display = 'flex';
       commentPopup(id, image, name, language, genres, rating, schedule);
     }
 
     if (closeButton) {
-      popupContainer.classList.add('close');
-      popupContainer.classList.remove('flex');
-      showContainer.classList.remove('close');
-      showContainer.classList.add('flex');
+      popupContainer.style.display = 'none';
+      showContainer.style.display = 'flex';
       addEvents();
       getLikes();
     }

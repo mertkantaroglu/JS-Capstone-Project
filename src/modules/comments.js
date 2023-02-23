@@ -14,12 +14,11 @@ export const showComment = (data, commentInfo) => {
   const commentItem = document.createElement('div');
   commentItem.classList.add('comment-items');
   if (!data.error) {
-    // eslint-disable-next-line
-    for (const element of data) {
+    data.forEach((element) => {
       const item = document.createElement('p');
-      item.innerHTML = `<span>${element.creation_date} ${element.username}: ${element.comment}</span>`;
+      item.innerHTML = `<span> ${element.creation_date} ${element.username}: ${element.comment}</span>`;
       commentItem.appendChild(item);
-    }
+    });
   }
   commentInfo.appendChild(commentItem);
 };

@@ -2,31 +2,28 @@ import { showComment, getComments, commentFormInput } from './comments.js';
 
 const popupContainer = document.querySelector('.popup-display');
 
-const commentPopup = async (
-  id, image, name, language, genres, rating, schedule,
-) => {
-  popupContainer.innerHTML = '';
-
-  popupContainer.innerHTML += `
+async function commentPopup(id, image, name, language, genres, rating, schedule) {
+  popupContainer.innerHTML = `
     <div class="show-${id} show-image-container">
       <div class="close-icon">X</div>
-      <img src=${image.original} alt="" class="show-img" />
+      <img src="${image.original}" alt="" class="show-img" />
       <h2 class="show-popup-title">${name}</h2>
-      </div>
+    </div>
     <div class="show-features">
-    <h3 class="show-info">Show Info</h3>
+      <h3 class="show-info">Show Info</h3>
       <p>Language: ${language}</p>
-      <p>Genre: ${genres.join(',')}</p> 
+      <p>Genre: ${genres.join(', ')}</p>
       <p>Rating: ${rating.average}</p>
-      <p>Schedule: ${schedule.time} on ${schedule.days}s</p>
-      <div class="comments-container"></div
+      <p>Schedule: ${schedule.time} on ${schedule.days}</p>
+      <div class="comments-container"></div>
+    </div>
   `;
 
-  const commentsContainer = document.querySelector('.show-features .comments-container');
+  const commentsContainer = popupContainer.querySelector('.comments-container');
   const comments = await getComments(id);
 
   showComment(comments, commentsContainer);
   commentFormInput(id, commentsContainer);
-};
+}
 
 export default commentPopup;

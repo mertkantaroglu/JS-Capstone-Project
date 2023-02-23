@@ -1,4 +1,4 @@
-const counter = (comment) => {
+export const counter = (comment) => {
   let commentCounter = comment.length;
   if (comment.error) {
     commentCounter = 0;

@@ -35,6 +35,7 @@
 ### Key Features <a name="key-features"></a>
 
 - **made with use of github workflow**
+- **made with use of API**
 - **made with use of linter checkers**
 - **made with use of Jest for testing**
 
@@ -57,7 +58,7 @@
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-Portfolio presentation will be coming soon.
+[Portfolio presentation](https://drive.google.com/file/d/18mu0mwTO2CITkyhW1HZLbc4MGX1Oy0vd/view?usp=share_link)
 
 ### Prerequisites <a name="prerequisites"></a>
 

@@ -1,4 +1,8 @@
 import './index.css';
+// import { loadShows } from './modules/renderWindow.js';
+
+// loadShows();
+
 import displayShows from './modules/displayShows.js';
 import getShows from './modules/getShows.js';
 import commentPopup from './modules/commentPopup.js';
@@ -18,7 +22,7 @@ const addEvents = () => {
   });
 };
 
-window.addEventListener('load', async () => {
+async function loadShows() {
   const shows = await getShows();
   displayShows(shows);
   addEvents();
@@ -26,7 +30,6 @@ window.addEventListener('load', async () => {
 
   const showLink = document.querySelector('.show');
   showLink.innerHTML = `Home (${getShowCount()})`;
-  getShowCount();
 
   document.addEventListener('click', async (e) => {
     const commentButton = e.target.closest('.comment-btn');
@@ -50,4 +53,6 @@ window.addEventListener('load', async () => {
       getLikes();
     }
   });
-});
+}
+
+window.addEventListener('load', loadShows);

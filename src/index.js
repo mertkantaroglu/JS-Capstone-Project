@@ -1,7 +1,4 @@
 import './index.css';
-// import { loadShows } from './modules/renderWindow.js';
-
-// loadShows();
 
 import displayShows from './modules/displayShows.js';
 import getShows from './modules/getShows.js';
